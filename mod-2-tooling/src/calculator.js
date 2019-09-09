@@ -3,3 +3,4 @@ class Calculator {
     return x + y;
   }
 }
+export default Calculator;

@@ -1,0 +1,22 @@
+{
+  "name": "mod-2-tooling",
+  "version": "0.0.1",
+  "description": "A demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "...",
+    "build": "webpack-cli",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maurice de Beijer",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.8"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6"
+  }
+}
