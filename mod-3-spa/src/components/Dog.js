@@ -1,7 +1,10 @@
 import React from "react";
 import imgSrc from "./dog.jpg";
+import { withRouter } from "react-router-dom";
 
-function Dog() {
+function Dog(props) {
+  console.log(props);
+
   return (
     <div>
       <img src={imgSrc} alt="A dog" height="200" />
@@ -9,4 +12,4 @@ function Dog() {
   );
 }
 
-export default Dog;
+export default withRouter(Dog);
