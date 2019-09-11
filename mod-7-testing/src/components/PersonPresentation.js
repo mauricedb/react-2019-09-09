@@ -4,7 +4,7 @@ import LabelWithInput from "./LabelWithInput";
 function PersonPresentation({ firstName, lastName, onChange, onSave }) {
   return (
     <div>
-      <div>FirstName = {firstName.toUpperCase()}</div>
+      <div data-test-id="The value">FirstName = {firstName.toUpperCase()}</div>
       <LabelWithInput
         label="Firstname: "
         name="firstName"

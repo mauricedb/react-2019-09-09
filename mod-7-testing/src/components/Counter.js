@@ -4,12 +4,6 @@ class Counter extends PureComponent {
   state = { count: 0, name: "Maurice" };
 
   onClick = () => {
-    // this.setState({
-    //   count: this.state.count + 1
-    // });
-    // this.setState({
-    //   count: this.state.count + 1
-    // });
     this.setState(function(state) {
       return { count: state.count + 1 };
     });
@@ -19,7 +13,6 @@ class Counter extends PureComponent {
   };
 
   render() {
-    console.log(this.state);
     return (
       <>
         <span>Value {this.state.count} </span>

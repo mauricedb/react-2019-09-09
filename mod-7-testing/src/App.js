@@ -7,9 +7,9 @@ import Clock from "./components/Clock";
 function App() {
   return (
     <div>
-      <h1>Better React Components</h1>
+      <h1>Unit testing</h1>
       <Counter />
-      <Person />
+      <Person onSave={console.log} />
       <Clock />
     </div>
   );

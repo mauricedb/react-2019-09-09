@@ -13,6 +13,7 @@ class Person extends PureComponent {
   };
 
   render() {
+    const { onSave } = this.props;
     const { firstName, lastName } = this.state;
 
     return (
@@ -20,7 +21,7 @@ class Person extends PureComponent {
         firstName={firstName}
         lastName={lastName}
         onChange={this.onChange}
-        onSave={console.log}
+        onSave={onSave}
       />
     );
   }
