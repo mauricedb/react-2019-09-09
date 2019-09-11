@@ -1,15 +1,31 @@
 import React, { useState, useEffect } from "react";
+import Person from "./Person";
 
-function Clock() {
+function useTime(interval) {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    setInterval(() => {
+    const handle = setInterval(() => {
       setTime(new Date());
-    }, 1000);
-  });
+    }, interval);
 
-  return <div>{time.toLocaleTimeString()}</div>;
+    return () => clearInterval(handle);
+  }, [interval]);
+
+  return time;
 }
 
-export default Clock;
+function Clock({ interval = 1000 }) {
+  const time = useTime(interval);
+
+  return (
+    <div>
+      {time.toLocaleTimeString()}
+      <Person data={1}>
+        <div></div>
+      </Person>
+    </div>
+  );
+}
+
+export default React.memo(Clock);
